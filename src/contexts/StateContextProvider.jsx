@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 
 const StateContext = createContext();
-const baseUrl = 'https://search32.p.rapidapi.com/api/search/v1';
+const baseUrl = 'https://google-search72.p.rapidapi.com/search';
 
 export const StateContextProvider = ({ children }) => {
   const [results, setResults] = useState([]);
@@ -14,7 +14,7 @@ export const StateContextProvider = ({ children }) => {
     const res = await fetch(`${baseUrl}${url}`, {
       method: 'GET',
       headers: {
-        'x-rapidapi-host': 'google-search3.p.rapidapi.com',
+        'x-rapidapi-host': 'google-search72.p.rapidapi.com',
         'x-rapidapi-key': process.env.REACT_APP_API_KEY,
       },
     });
